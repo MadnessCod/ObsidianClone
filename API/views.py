@@ -11,11 +11,11 @@ from .forms import FileForm
 class UploadView(CreateView):
     model = File
     form_class = FileForm
+    template_name = 'upload.html'
     success_url = reverse_lazy('file_list')
 
 
 class FileListView(ListView):
     model = File
+    template_name = 'file_list.html'
     context_object_name = 'file'
-
-
