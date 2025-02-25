@@ -7,7 +7,7 @@ from .models import File
 
 @register(File)
 class FileAdmin(admin.ModelAdmin):
-    list_display = ['pk', 'file_name']
+    list_display = ['id', 'file_name']
     list_filter = ['created_at', 'updated_at']
 
     def file_name(self, obj):
