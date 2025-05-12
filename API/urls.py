@@ -5,6 +5,7 @@ from .views import (
     FileDeleteView,
     MarkdownCheckView,
     ShowView,
+    FileDetailView
 )
 
 urlpatterns = [
@@ -13,4 +14,5 @@ urlpatterns = [
     path("files/delete/<int:pk>/", FileDeleteView.as_view(), name="delete"),
     path("check/", MarkdownCheckView.as_view(), name="check"),
     path("show/", ShowView.as_view(), name="show_text"),
+    path("files/detail/<int:pk>/", FileDetailView.as_view(), name="file_detail"),
 ]

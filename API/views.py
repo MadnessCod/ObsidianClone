@@ -47,3 +47,21 @@ class ShowView(TemplateView):
         context['text'] = self.request.session['submitted_text']
         context['corrected'] = 'this is corrected text'
         return context
+
+
+class FileDetailView(DetailView):
+    model = File
+    template_name = 'file_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        file_obj = self.object
+
+        try:
+            with file_obj.file.open('r') as f:
+                content = f.read()
+        except FileNotFoundError as e:
+            content = f'[Error reading file: {e}'
+
+        context['file_content'] = content
+        return context
