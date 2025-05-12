@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'check.css' %}">
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label>
+                {{ form.text }}
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

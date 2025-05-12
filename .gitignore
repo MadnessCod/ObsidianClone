@@ -145,3 +145,4 @@ tests/screenshots/
 *local_settings.py
 *.sqlite3
 poetry.toml
+media/
