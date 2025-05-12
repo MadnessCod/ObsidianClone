@@ -1,5 +1,5 @@
 from django.views.generic.edit import FormView
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView, TemplateView, DeleteView
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 
@@ -23,7 +23,7 @@ class FileListView(ListView):
     context_object_name = "files"
 
 
-class FileDetailView(DetailView):
+class FileDeleteView(DeleteView):
     model = File
     template_name = "confirm_delete.html"
     success_url = reverse_lazy("file_list")
