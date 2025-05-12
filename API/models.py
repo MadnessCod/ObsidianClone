@@ -1,3 +1,5 @@
+import os
+
 from django.db import models
 
 
@@ -17,7 +19,13 @@ class MyBaseModel(models.Model):
 
 
 class File(MyBaseModel):
+    name = models.CharField(max_length=64)
     file = models.FileField(upload_to="files/")
+
+    def save(self, *args, **kwargs):
+        if self.file:
+            self.name = os.path.basename(self.file.name)
+        super().save(*args, **kwargs)
 
     class Meta:
         ordering = ["-updated_at"]

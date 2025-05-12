@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #222;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin: 0;
+}
+
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+p {
+    color: #555;
+    font-style: italic;
+}
+
+a[href*="upload"] {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #28a745;
+    text-decoration: none;
+}
+
+a[href*="upload"]:hover {
+    text-decoration: underline;
+}
