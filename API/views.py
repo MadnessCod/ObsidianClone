@@ -4,7 +4,7 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 
 from .models import File
-from .forms import FileForm, TestForm
+from .forms import FileForm, TextFrom, OnlineForm
 
 
 # Create your views here.
@@ -30,7 +30,7 @@ class FileDeleteView(DeleteView):
 
 
 class MarkdownCheckView(FormView):
-    form_class = TestForm
+    form_class = TextFrom
     template_name = 'check.html'
     success_url = reverse_lazy("show_text")
 

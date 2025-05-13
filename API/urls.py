@@ -5,7 +5,7 @@ from .views import (
     FileDeleteView,
     MarkdownCheckView,
     ShowView,
-    FileDetailView
+    FileDetailView,
 )
 
 urlpatterns = [

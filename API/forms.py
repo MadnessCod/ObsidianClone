@@ -16,5 +16,5 @@ class FileForm(forms.ModelForm):
         return file
 
 
-class TestForm(forms.Form):
+class TextFrom(forms.Form):
     text = forms.CharField(widget=forms.Textarea)
